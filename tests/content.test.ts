@@ -4,7 +4,7 @@ import { totalTests } from '../src/lib/metrics';
 
 describe('totalTests', () => {
   it('soma os testes dos projetos e ignora os que não declaram', () => {
-    expect(totalTests(projects)).toBe(83 + 150 + 101 + 154);
+    expect(totalTests(projects)).toBe(83 + 150 + 201 + 158);
   });
 
   it('retorna 0 para lista vazia', () => {

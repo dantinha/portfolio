@@ -57,7 +57,7 @@ export const projects: readonly Project[] = [
     stack: ['Python', 'DuckDB', 'dbt', 'FastMCP', 'SQLGlot', 'Streamlit'],
     tests: 83,
     facts: [
-      '90.0% benchmark accuracy (33.3% naive baseline)',
+      '86.7% benchmark accuracy (33.3% naive baseline)',
       '-61.3% tokens via static prefix caching',
       '24/24 SQL attack vectors blocked',
     ],
@@ -67,7 +67,7 @@ export const projects: readonly Project[] = [
       decision:
         'Engineered a 4-layer semantic pipeline with human-in-the-loop disambiguation (STOP_AND_ASK_USER), BFS join-graph routing, cacheable prompt prefixes, and deterministic SQLGlot AST sandboxing over 7 FastMCP tools.',
       impact:
-        'Single-shot accuracy jumped from 33.3% to 83.3% (up to 90.0% with self-correction) across 30 gold questions, cutting token cost by 61.3% with 83 automated tests and a live Streamlit playground.',
+        'Single-shot accuracy jumped from 33.3% to 83.3% (up to 86.7% with self-correction) across 30 gold questions, cutting token cost by 61.3% with 83 automated tests and a live Streamlit playground.',
     },
     links: [
       { label: 'Live Demo', href: 'https://data-context-engine.streamlit.app' },
@@ -105,13 +105,13 @@ export const projects: readonly Project[] = [
     tagline: '3D Engine · CSG Worker',
     summary:
       'Natural language to parametric 3D geometry. The LLM outputs a Zod-validated CSG tree evaluated by manifold-3d in a Web Worker.',
-    status: 'in-progress',
+    status: 'shipped',
     surface: 'sculptural',
     stack: ['TypeScript', 'React Three Fiber', 'manifold-3d', 'Zod'],
-    tests: 101,
+    tests: 201,
     facts: [
-      '101 automated tests, strict TypeScript',
-      'Zero-copy mesh worker & OpenSCAD emitter',
+      '201 unit tests (95%+ coverage) + 5 Playwright E2E tests',
+      'Zero-copy mesh worker, OpenSCAD emitter & Cloudflare proxy',
     ],
     caseStudy: {
       problem:
@@ -119,7 +119,7 @@ export const projects: readonly Project[] = [
       decision:
         'Introduced an explicit Intermediate Representation (CSG JSON tree) validated by Zod before a Web Worker running manifold-3d evaluates zero-copy meshes for React Three Fiber and deterministic OpenSCAD export.',
       impact:
-        '101 automated tests green across IR validation, OpenSCAD emission, and 3D viewport geometry, backed by secret-scanning pre-commit hooks and CI.',
+        '201 automated unit tests (95%+ coverage) and 5/5 Playwright E2E tests green across IR validation, OpenSCAD emission, 3D viewport geometry, and /api/gemini Worker proxy, backed by secret-scanning pre-commit hooks and CI.',
     },
     links: [{ label: 'GitHub', href: 'https://github.com/dantinha/text-to-cad' }],
   },
@@ -132,9 +132,9 @@ export const projects: readonly Project[] = [
     status: 'shipped',
     surface: 'cream',
     stack: ['Python', 'SQLite', 'Pydantic'],
-    tests: 154,
+    tests: 158,
     facts: [
-      '154 automated tests passing (100%)',
+      '158 automated tests passing (100%)',
       'Zero-cost infra with Telegram & Windows alerts',
     ],
     caseStudy: {
@@ -143,7 +143,7 @@ export const projects: readonly Project[] = [
       decision:
         'Built an explainable 4-pillar scoring engine (Role Alignment, Gap Closure, Recruiter Signal, Cost Urgency) with automatic CV redundancy suppression and epoch-deduplicated alerts.',
       impact:
-        '154 automated unit and integration tests passing at zero infrastructure cost, surfacing high-signal AI & Cloud exam vouchers on time.',
+        '158 automated unit and integration tests passing at zero infrastructure cost, surfacing high-signal AI & Cloud exam vouchers on time.',
     },
     links: [{ label: 'GitHub', href: 'https://github.com/dantinha/cert-radar' }],
   },
