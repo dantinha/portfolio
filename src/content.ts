@@ -214,9 +214,11 @@ export const experience = [
 ] as const;
 
 export const education = [
+  { title: 'Specialization in Machine Learning Engineering', org: 'FIAP', period: '2025 – 2026' },
   { title: 'MBA in Business Intelligence', org: 'FIAP', period: '2025 – 2026' },
   { title: 'MBA in Industrial Automation', org: 'USP-POLI', period: '2023 – 2025' },
-  { title: 'B.Sc. Electrical Engineering', org: 'Universidade São Judas', period: '2024 – 2026' },
+  { title: 'B.Sc. in Electrical Engineering', org: 'Universidade São Judas', period: '2024 – 2026' },
+  { title: 'Associate Degree in Microelectronics', org: 'FATEC-SP', period: '2020 – 2023' },
   { title: 'CAPM® Certification', org: 'PMI', period: '2024' },
 ] as const;
 

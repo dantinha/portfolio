@@ -42,4 +42,11 @@ describe('integridade do conteúdo', () => {
     const blob = JSON.stringify({ profile, projects, experience, education });
     expect(blob).not.toMatch(/98579|\+55|AIza|ghp_|gho_/);
   });
+
+  it('formação inclui Microeletrônica e Machine Learning Engineering', () => {
+    const titles = education.map((e) => e.title);
+    expect(titles).toContain('Associate Degree in Microelectronics');
+    expect(titles).toContain('Specialization in Machine Learning Engineering');
+    expect(education).toHaveLength(6);
+  });
 });
